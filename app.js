@@ -2,9 +2,11 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const port = process.env.PORT || 4000;
+const cors = require("cors");
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 const studentData = [
   { id: 1, name: "Ella", course: "comp sci" },
   { id: 2, name: "Judith", course: "Biotech" },
